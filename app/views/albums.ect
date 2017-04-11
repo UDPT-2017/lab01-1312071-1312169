@@ -1,0 +1,12 @@
+<% extend '../views/layout' %>
+
+<div class="row" >
+  <% for album in @albums : %>
+    <div class="col-md-4">
+      <img src=<%- album.image %> class = "album" data-id ="<%= album.id %>"
+        width='250' height='250'/>
+      <h4>Author: <%= album.name %></h4>
+      <h4>Views: <%= album.total_view %></h4>
+    </div>
+  <% end %>
+</div>
