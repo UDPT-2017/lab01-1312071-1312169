@@ -12,6 +12,7 @@ var configExpress = function(app){
   app.set('view engine','ect');
   app.engine('ect', renderer.render);
   app.set('views', './app/views');
+  app.use(express.static('app/public'));
 
   app.use(bodyParser.urlencoded({
      extended: true
