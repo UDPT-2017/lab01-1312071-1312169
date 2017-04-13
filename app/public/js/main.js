@@ -9,4 +9,15 @@ $(document).ready(function(){
       }
     })
   });
+  $('.image').click(function(){
+    var id = $(this).data('id')
+    $.ajax({
+      url: '/images/' + $(this).data('id'),
+      type: 'get',
+      success: function(result){
+        window.location.href = '/image/' + id;
+      }
+    });
+
+  });
 });
