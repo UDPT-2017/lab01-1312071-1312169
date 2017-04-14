@@ -1,6 +1,7 @@
 var aboutController = require('../controllers/aboutController');
 var albumsController = require('../controllers/albumsController');
 var imagesController = require('../controllers/imagesController');
+var aboutController = require('../controllers/aboutController');
 var blogsController = require('../controllers/blogsController');
 
 var configRoutes = function(app){
@@ -12,6 +13,7 @@ var configRoutes = function(app){
   app.get('/albums/:id', imagesController.showImages);
   app.get('/images/:id', imagesController.showImage);
   app.get('/image/:id', imagesController.getImage);
+  app.get('/about', aboutController.index);
   app.get('/blogs', blogsController.getlist);
   app.get('/blog/:id', blogsController.getblog);
   app.get('/blogs/:id', blogsController.setview);
