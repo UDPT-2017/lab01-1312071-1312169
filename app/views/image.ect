@@ -1,0 +1,11 @@
+<% extend '../views/layout' %>
+<input type="hidden" id="refresh" value="no">
+<div class="row" >
+  <% for image in @images : %>
+    <div class="col-xs-6 col-md-4">
+      <img src=<%- image.link %> class = "image" data-id ="<%= image.id %>" data-album_id = "<%- image.album_id %>" width='250px' height='250px'/>
+      <h4>Authors: <%= image.author %></h4>
+      <h4>Views: <%= image.view %></h4>
+    </div>
+  <% end %>
+</div>
