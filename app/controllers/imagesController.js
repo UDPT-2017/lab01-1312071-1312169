@@ -27,7 +27,6 @@ var imagesController = {
     console.log("get image_id: " + image_id);
     pg.connect(connect, function(err, client, done){
       client.query("SELECT * FROM images WHERE id = $1", [image_id], function(err, result){
-        console.log("link: " + result.rows[0].link)
         res.render('showImage', {image: result.rows[0]});
       })
     })

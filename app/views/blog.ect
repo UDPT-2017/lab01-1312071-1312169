@@ -1,0 +1,18 @@
+<% extend '../views/layout' %>
+
+<div class="row" >
+  <% for blog in @blogs : %>
+    <div class="col-md-3">
+      <img src=<%- blog.image_blog %> class = "blog" data-id ="<%= blog.id %>"
+        width='250' height='250'/>
+    </div>
+    <div class="col-md-3">
+      <a class="blog" data-id = "<%= blog.id %>">
+        <h4><%= blog.title %></h4><br/>
+      </a>
+      <%= blog.abstract %></br/><br/>
+      Author: <%= blog.name %><br/>
+      Views: <%= blog.view %>
+    </div>
+  <% end %>
+</div>
