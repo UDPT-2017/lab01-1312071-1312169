@@ -1,5 +1,6 @@
 var albumsController = require('../controllers/albumsController');
 var imagesController = require('../controllers/imagesController');
+var blogsController = require('../controllers/blogsController');
 
 var configRoutes = function(app){
   app.get('/', function(req, res){
@@ -9,6 +10,9 @@ var configRoutes = function(app){
   app.get('/albums/:id', imagesController.showImages);
   app.get('/images/:id', imagesController.showImage);
   app.get('/image/:id', imagesController.getImage);
+  app.get('/blogs', blogsController.getlist);
+  app.get('/blog/:id', blogsController.getblog);
+  app.get('/blogs/:id', blogsController.setview);
 };
 
 module.exports = configRoutes;
