@@ -2,7 +2,8 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   ect = require('ect'),
   app = express();
-
+var nocache = require('nocache');
+app.use(nocache());
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true}));
 
