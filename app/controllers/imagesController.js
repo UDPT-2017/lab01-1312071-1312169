@@ -13,7 +13,6 @@ var imagesController = {
   },
   showImage: function(req, res){
     var image_id = req.params.id;
-    console.log("image_id: " + image_id);
     pg.connect(connect, function(err, client, done){
       client.query("SELECT * FROM images WHERE id = $1", [image_id], function(err, result){
         client.query("UPDATE images SET view = view + 1 WHERE id = $1", [image_id]);
@@ -24,7 +23,6 @@ var imagesController = {
   },
   getImage: function(req, res){
     var image_id = req.params.id;
-    console.log("get image_id: " + image_id);
     pg.connect(connect, function(err, client, done){
       client.query("SELECT * FROM images WHERE id = $1", [image_id], function(err, result){
         res.render('showImage', {image: result.rows[0]});

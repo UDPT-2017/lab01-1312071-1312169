@@ -8,8 +8,11 @@
 </head>
 <body>
 
- </html>
  <div class="container">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item active">Sign up</li>
+</ol>
  <% if @message : %>
       <% if @message.error : %>
       <p class="alert alert-danger">
@@ -47,3 +50,5 @@
 <script src = "/js/main.js" charset = "utf-8"></script>
 
 </body>
+
+ </html>

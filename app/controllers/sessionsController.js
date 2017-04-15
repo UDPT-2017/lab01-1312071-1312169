@@ -7,8 +7,6 @@ var sessionsController = {
   login: function(req, res){
     var name = req.body.name;
     var pass = req.body.password;
-    console.log(name);
-    console.log(pass);
     current_user = {};
     var message = {};
     pg.connect(connect, function(err, client, done){

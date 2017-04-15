@@ -13,7 +13,6 @@ var configRoutes = function(app){
   app.get('/albums/:id', imagesController.showImages);
   app.get('/images/:id', imagesController.showImage);
   app.get('/image/:id', imagesController.getImage);
-  app.get('/about', aboutController.index);
   app.get('/blogs', blogsController.getlist);
   app.get('/blog/:id', blogsController.getblog);
   app.get('/blogs/:id', blogsController.setview);
