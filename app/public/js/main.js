@@ -20,10 +20,8 @@ $(document).ready(function(){
     });
 
   });
-
   $('.blog').click(function(){
     var id = $(this).data('id');
-    alert(id);
     $.ajax({
       url: '/blogs/' + $(this).data('id'),
       type: 'get',

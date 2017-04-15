@@ -18,7 +18,7 @@ var imagesController = {
       client.query("SELECT * FROM images WHERE id = $1", [image_id], function(err, result){
         client.query("UPDATE images SET view = view + 1 WHERE id = $1", [image_id]);
         client.query("UPDATE albums SET total_view = total_view + 1 WHERE id = $1", [result.rows[0].album_id]);
-        res.render('showImage', {image: result.rows});
+        res.status(200).send('Success');
       })
     })
   },
