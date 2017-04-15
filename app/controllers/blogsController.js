@@ -40,8 +40,25 @@ var blogsController = {
     }catch(e){
 
     }
-  }
+  },
+  myblog: function(req, res){
+    try{
+      console.log("home: "+ current_user.name)
+      if(current_user ){
+        pg.connect(connect, function(err, client, done){
+          client.query("SELECT * FROM blog WHERE user_id = $1",[current_user.id], function(err, result){
+          res.render('home', {myblog: result.rows});
+          });
+        })
+      }
+      else{
+        res.render('home');
+      }
 
+    }catch(e){
+      res.render('home');
+    }
+  }
 }
 
 module.exports = blogsController;
