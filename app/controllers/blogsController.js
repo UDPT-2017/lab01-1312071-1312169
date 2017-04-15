@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var blogsController = {
   getlist: function(req, res){
      try{
-      console.log("get list");
       pg.connect(connect, function(err, client, done){
         client.query("SELECT b.*, u.name FROM blog b join users u on b.user_id = u.id", function(err, result){
           res.render('blog', {blogs: result.rows});
@@ -40,8 +39,24 @@ var blogsController = {
     }catch(e){
 
     }
-  }
+  },
+  myblog: function(req, res){
+    try{
+      if(current_user ){
+        pg.connect(connect, function(err, client, done){
+          client.query("SELECT * FROM blog WHERE user_id = $1",[current_user.id], function(err, result){
+          res.render('home', {myblog: result.rows});
+          });
+        })
+      }
+      else{
+        res.render('home');
+      }
 
+    }catch(e){
+      res.render('home');
+    }
+  }
 }
 
 module.exports = blogsController;

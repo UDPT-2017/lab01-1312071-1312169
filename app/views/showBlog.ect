@@ -1,4 +1,9 @@
 <% extend '../views/layout' %>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/blogs">Blogs</a></li>
+  <li class="breadcrumb-item active">blog</li>
+</ol>
 <h3 align="center"><%= @blog.title %></h3><br/>
 <img class="image_blog" src="<%- @blog.image_blog %>" width="380px" height = "300px"/><br/>
 <div class="row">

@@ -1,12 +1,8 @@
 <% extend '../views/layout' %>
 
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item active">Blog</li>
-</ol>
-
+<% if @myblog : %>
 <div class="row" >
-  <% for blog in @blogs : %>
+  <% for blog in @myblog : %>
     <div class="col-md-3">
       <img src=<%- blog.image_blog %> class = "blog" data-id ="<%= blog.id %>"
         width='250' height='250'/>
@@ -21,4 +17,6 @@
     </div>
   <% end %>
 </div>
-
+<% else : %>
+  Bạn không có bài đăng nào ở hiện tại hoặc chưa đăng nhập vào hệ thống.
+<% end %>

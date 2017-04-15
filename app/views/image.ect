@@ -1,4 +1,10 @@
 <% extend '../views/layout' %>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item active">Albums</li>
+</ol>
+
 <input type="hidden" id="refresh" value="no">
 <div class="row" >
   <% for image in @images : %>
