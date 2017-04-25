@@ -1,12 +1,12 @@
-# BT-UDPT-1 - *Name of your app*
+# BT-UDPT-1 - Lab01
 
-**Name of your app** là một bài tập 1 tại môn UDPT.
+Lab01 là một bài tập 1 tại môn UDPT.
 
 Thành viên:
 * [x] 1312071 Nguyễn Thị Diệu (1312071)
 * [x] 1312169 Nguyễn Mạnh Hải (Mango95)
 
-URL: **URL hosting của bài tập**
+URL: https://lit-retreat-30560.herokuapp.com/
 
 ## Yêu cầu
 
@@ -53,7 +53,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 Link ảnh GIF demo ứng dụng:
 
-![Video Walkthrough](demo.gif)
+![Video Walkthrough](https://github.com/UDPT-2017/lab01-1312071-1312169/blob/master/gif2.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
